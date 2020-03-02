@@ -1,0 +1,15 @@
+## About PHP-FPM
+FPM stands for FastCGI(protocol) Process Manager
+
+Proxy Servers : Nginx and Apache are reverse proxy servers used by web servers. Advantage of using proxy servers:
+1) Loadbalancing, it handle heavy traffics
+2) TLS/SSL termination
+3) Caching therefore, fastest and best for serving static files like pdf, zip, html, php, png, .css, .js etc
+4) Between Nginx and Apache, nginx can handle 4 times more concurrent connection than Apache and consume less CPU and RAM
+5) Apache make new process for each web reques but nginx combines workeer process to handle multiple connections, hence consumes
+less CPU and RAM, Nginx being asynchronous, non-blocking, event driven connection handling algorithm designed to serve static 
+content quickly and handle dynamic requests of to other one or multiple web servers. 
+
+PHP-FPM
+
+

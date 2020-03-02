@@ -1,0 +1,47 @@
+Below are the most popular and widely used nginx commands
+
+1. Start nginx
+# service nginx start
+# systemctl start nginx
+# /etc/init.d/nginxt start
+
+2. Stop nginx
+# service nginx stop
+# systemctl stop nginx
+# /etc/init.d/nginx stop
+
+3. Restart nginx
+# service nginx restart
+# systemctl restart nginx
+# /etc/init.d/nginx restart
+
+3. Quit nginx
+# service nginx quit
+# systemctl quit nginx
+
+4. Reload nginx
+# service nginx reload
+# systemctl reload nginx
+# /usr/sbin/nginx -s reload
+# /etc/init.d/nginx reload
+
+5. View nginx status
+# service nginx status
+# systemctl status nginx
+# /etc/init.d/nginx status
+
+6. Test nginx server configuration
+# nginx -t
+# service nginx configtest
+# systemctl config nginx
+# /etc/init.d/nginx cofigtest
+
+7. Check nginx version
+# service nginx -v
+# systemctl -V nginx
+
+8. Show command help
+# service nginx -h
+# systemctl -h nginx
+# service nginx ?
+# systemctl ? nginx

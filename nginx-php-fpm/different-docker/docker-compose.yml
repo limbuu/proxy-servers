@@ -1,0 +1,17 @@
+version: '2.0'
+services:
+
+    php:
+        image: php-fpm:v1
+        volumes:
+          - ./php-app/:/var/www/html/
+        ports:
+            - "9000:9000"
+    nginx:
+        image: nginx:v4
+        volumes:
+          - ./php-app/:/var/www/html/
+        depends_on:
+          - php
+        ports:
+            - "80:80"

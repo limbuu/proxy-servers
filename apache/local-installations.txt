@@ -1,0 +1,10 @@
+RUN apache2 locally as proxy server following below commands
+# installation
+sudo apt-get update
+sudo apt-get install apache2
+sudo service apache2 status
+sudo service apache2 start
+
+
+# note : apache run in default 80 port
+

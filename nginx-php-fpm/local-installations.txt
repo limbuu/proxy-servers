@@ -1,0 +1,18 @@
+##### install and check nginx
+sudo apt-get autoremove --purge nginx nginx-common nginx-core && sudo rm -rf /var/www/html && sudo apt-get install nginx -y
+## (you can find the nginx configuration at /etc/nginx)
+## (other path for nginx: /usr/sbin/nginx /etc/nginx /usr/share/nginx)
+## check nginx status
+sudo nginx -t
+## start nginx
+sudo service nginx start
+## stop nginx
+sudo service nginx stop
+## check nginx status
+sudo service nginx status
+
+## Install php-fpm
+sudo apt-get install php5.6-fpm
+## Using ppa install through 
+
+

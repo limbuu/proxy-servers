@@ -1,0 +1,21 @@
+#FROM ubuntu:16.04
+
+#RUN apt-get update
+
+## install php-fpm 
+#RUN apt-get install php7.0-fpm -y
+
+FROM php:7.0-fpm
+
+## add php-fpm config here
+RUN rm -rf /etc/php/7.0/fpm/pool.d/www.conf
+ADD ./php-fpm.conf /etc/php/7.0/fpm/pool.d/www.conf
+
+## add php application
+ADD ./php-app/* /var/www/html/
+
+## expose port
+#EXPOSE 9000
+
+#CMD /etc/init.d/php7.0-fpm start
+#CMD ["php-fpm"]

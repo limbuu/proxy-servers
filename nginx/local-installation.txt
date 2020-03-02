@@ -1,0 +1,14 @@
+#Locally install Nginx and start using it running following commands:
+
+sudo apt-get udpate
+sudo apt-get install nginx -y
+sudo service nginx status 
+sudo service nginx start
+
+#Note: Nginx runs on port 80
+
+#To change the nginx.conf and other files
+
+cat /var/www/html for the root files
+cat /etc/nginx/sites-enabled/default.conf for the configuration(ubuntu)
+cat /etc/nginx/nginx.conf for the configuration(alipne)

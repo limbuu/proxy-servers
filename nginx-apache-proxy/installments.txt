@@ -1,0 +1,29 @@
+### Configure to use nginx as reverse proxy to the apache server ###
+1. Ubuntu Server
+2. Apache Installed
+3. Nginx Installed
+
+## install and check apache2 in default settings
+sudo apt-get update
+sudo apt-get install apache2 -y
+sudo service apache2 start (it is running on port 80, open browser at http://yourip which gives at http://localhost)
+(if you dont find your ip check /etc/hosts, and see the apache2 config at /etc/apache2/)
+
+## now edit the default configuration of apache2 server
+sudo nano /etc/apache2/ports.conf
+(change the port to 8080 as said in https://medium.com/@khandelwal12nidhi/setup-nginx-as-a-reverse-proxy-for-apache-server-f182bf0ab8d3) 
+(update the port at default.conf at )
+sudo nano /etc/apache2/sites-enabled/000-default.conf
+sudo service apache2 restart(it is running at port 8080 at http://your_ip:8080)
+
+
+## install and check nginx
+sudo apt-get autoremove --purge nginx nginx-common nginx-core && sudo rm -rf /var/www/html && sudo apt-get install nginx -y
+(you can find the nginx configuration at /etc/nginx)
+(other path for nginx: /usr/sbin/nginx /etc/nginx /usr/share/nginx)
+## check nginx status
+sudo nginx -t
+
+
+
+## now redirect nginx to apache2
